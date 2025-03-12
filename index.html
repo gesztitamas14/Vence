@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VENCE Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons (for Facebook, Twitter, LinkedIn, Search icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+    }
+    footer{
+        background-color: rgba(15, 15, 19, 0.849);
+        color: #666;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-left: 5%;
+    }
+
+    .navbar-nav .nav-link {
+      color: #666;
+      margin: 0 1.5rem;
+      transition: color 0.2s;
+    }
+    .navbar-nav .nav-link.active {
+      color: #000;
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #000;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-light .navbar-toggler-icon {
+      background-image: none;
+    }
+    .social-icons{
+        margin-right: 5%;
+    }
+    .social-icons a {
+      color: #666;
+      margin-left: 1rem;
+      transition: color 0.2s;
+    }
+    .social-icons a:hover {
+      color: #000;
+    }
+    .article-section {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .article-section p{
+        color: #999
+    }
+    .divider {
+      height: 1px;
+      background-color: #ddd;
+      margin: 1rem 0;
+    }
+    .article-date {
+      font-size: 0.9rem;
+      color: #999;
+    }
+    .article-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+      margin-right: 30%;
+    }
+    .article-intro {
+      font-size: 1rem;
+      color: #999;
+    }
+    .article-meta {
+      font-size: 0.9rem;
+      color: #999;
+    }
+    .full-width-img {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      margin: 80px 0;
+    }
+    .full-width-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .table.project-info-table th,
+    .table.project-info-table td {
+    border: none !important;
+    }
+    .table.project-info-table td{
+        color:#999;
+    }
+
+    .tag {
+        display: inline-block;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: white;
+        color: #999;
+        border: 1px solid #999;
+        padding: 0.3rem 0.6rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        margin-top: 3%;
+    }
+    .navbar-light .navbar-toggler-icon {
+        /* this is how I can change the menu's lines color black */
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+
+    .tag p{
+        color:#999;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">VENCE</a>
+  
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse w-100" id="navbarContent">
+        <ul class="navbar-nav flex-column flex-lg-row mb-2 mb-lg-0 ms-auto text-end">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Example</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inspiration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Courses</a>
+          </li>
+        </ul>
+        <div class="social-icons mt-3 mt-lg-0 ms-lg-3 text-end">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="ms-3"><i class="bi bi-search"></i></a>
+        </div>
+      </div>
+      
+      
+    </div>
+  </nav>
+  
+
+
+  <section class="container article-section">
+    <div class="article-date">28 Jun 2023</div>
+
+    <h2 class="article-title">
+      Aron Klein's captivating images of the UDEA's culture.
+    </h2>
+  
+    <p class="article-intro">
+      Many years ago, I worked for my parents who ran a video production company.
+    </p>
+  
+    <div class="article-meta">
+      Petar Tovarovation &nbsp; | &nbsp; Design Trend &nbsp; | &nbsp; 2 min
+    </div>
+  </section>
+  
+  <div class="container-fluid px-0 my-5">
+    <div class="full-width-img">
+      <img src="brown_hanger.jpg" alt="Feature Image">
+    </div>
+  </div>
+
+  <section class="container article-section">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
+      dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
+      dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
+      dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+    </p>
+    <h2 class="article-title">
+        Many of life's failures are people who did not realise how close they were to success when they gave up
+      </h2>
+  </section>
+
+
+  
+  <section class="container my-4">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <img src="black_coats.jpg" alt="Black Hanging Coats" class="img-fluid">
+      </div>
+      <div class="col-md-6 mb-3">
+        <img src="red_hoodie.jpg" alt="Red Oversized Hoodie" class="img-fluid">
+      </div>
+    </div>
+  </section>
+
+  <section class="container article-section">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
+        dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
+        dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
+        dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+    </p>
+  </section>
+
+
+
+<section class="container my-4">
+    <div class="row">
+      <div class="col-12">
+        <table class="table project-info-table w-100">
+          <thead>
+            <tr>
+              <th>Location:</th>
+              <th>Size:</th>
+              <th>Designer:</th>
+              <th>Released:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sydney, Australia</td>
+              <td>34,000 m²</td>
+              <td>Sean Connor</td>
+              <td>2022</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex flex-wrap mt-2">
+          <span class="tag">Creative</span>
+          <span class="tag">Inspiration</span>
+          <span class="tag">Travel</span>
+          <span class="tag">Photography</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="py-4 border-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <h5 class="mb-0">VENCE Studio</h5>
+      </div>
+      <div>
+        <a href="#" class="me-3 text-decoration-none">About Studio</a>
+        <a href="#" class="me-3 text-decoration-none">Archive</a>
+        <a href="#" class="me-3 text-decoration-none">Contact Us</a>
+        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="container text-center mt-3">
+      <small>© 2023, All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
