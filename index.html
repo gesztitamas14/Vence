@@ -35,10 +35,26 @@
     }
 
     .navbar-nav .nav-link {
-      color: #666;
-      margin: 0 1.5rem;
-      transition: color 0.2s;
+        position: relative;
+        text-decoration: none;
+        color: #666;
+        margin: 0 1.5rem;
+        transition: color 0.2s;
     }
+    .navbar-nav .nav-link.active::after,
+        .navbar-nav .nav-link:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #af947a;
+        transition: width 0.3s ease-in-out;
+    }
+    .navbar-nav .nav-link::after {
+        width: 0;
+        }
     .navbar-nav .nav-link.active {
       color: #000;
       font-weight: 500;
@@ -104,6 +120,10 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .colored-dot{
+        color: #af947a;
+    }
     
     .table.project-info-table th,
     .table.project-info-table td {
@@ -132,17 +152,23 @@
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
 
+    footer a {
+    color: inherit !important;
+    }
 
     .tag p{
         color:#999;
     }
+
+
+
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">VENCE</a>
+      <a class="navbar-brand" href="#">VENCE<span class="colored-dot">.</span></a>
   
       <button
         class="navbar-toggler"
@@ -157,7 +183,7 @@
       </button>
   
       <div class="collapse navbar-collapse w-100" id="navbarContent">
-        <ul class="navbar-nav flex-column flex-lg-row mb-2 mb-lg-0 ms-auto text-end">
+        <ul class="navbar-nav flex-column flex-lg-row mb-2 mb-lg-0 mx-lg-auto text-end text-lg-center">
           <li class="nav-item">
             <a class="nav-link active" href="#">Example</a>
           </li>
@@ -172,10 +198,10 @@
           </li>
         </ul>
         <div class="social-icons mt-3 mt-lg-0 ms-lg-3 text-end">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-twitter"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#" class="ms-3"><i class="bi bi-search"></i></a>
+            <a href="#" class="me-2 text-decoration-none">Fb</a>
+            <a href="#" class="me-2 text-decoration-none">Tw</a>
+            <a href="#" class="text-decoration-none border-end pe-3">Ln</a>
+            <a href="#" class="ms-3"><i class="bi bi-search"></i></a>
         </div>
       </div>
       
@@ -223,16 +249,6 @@
 
 
   
-  <section class="container my-4">
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <img src="black_coats.jpg" alt="Black Hanging Coats" class="img-fluid">
-      </div>
-      <div class="col-md-6 mb-3">
-        <img src="red_hoodie.jpg" alt="Red Oversized Hoodie" class="img-fluid">
-      </div>
-    </div>
-  </section>
 
   <section class="container article-section">
     <p>
@@ -282,28 +298,45 @@
     </div>
   </section>
   
-  <footer class="py-4 border-top">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div>
-        <h5 class="mb-0">VENCE Studio</h5>
+  <footer class="py-5 border-top">
+    <div class="container">
+      <!-- Top Row: Studio Title, Menu Links, Social Icons -->
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4 text-start">
+          <h5 class="mb-0">VENCE Studio<span class="colored-dot">.</span></h5>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <a href="#" class="me-3 text-decoration-none">About Studio</a>
+          <a href="#" class="me-3 text-decoration-none">Archive</a>
+          <a href="#" class="me-3 text-decoration-none">Contact Us</a>
+        </div>
+        <div class="col-12 col-md-4 text-end">
+            <a href="#" class="me-2 text-decoration-none">Fb</a>
+            <a href="#" class="me-2 text-decoration-none">Tw</a>
+            <a href="#" class="text-decoration-none">Ln</a>
+        </div>
       </div>
-      <div>
-        <a href="#" class="me-3 text-decoration-none">About Studio</a>
-        <a href="#" class="me-3 text-decoration-none">Archive</a>
-        <a href="#" class="me-3 text-decoration-none">Contact Us</a>
-        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
-        <a href="#"><i class="bi bi-linkedin"></i></a>
+      <!-- Divider -->
+      <hr class="my-4">
+      <div class="row">
+        <div class="col text-start">
+          <small class="mb-1">1088, North Street, Alexandria, AU</small>
+        </div>
+        <div class="col text-end">
+            <small>© 2023, All Rights Reserved.</small>
+          </div>
+        
       </div>
-    </div>
-    <div class="container text-center mt-3">
-      <small>© 2023, All Rights Reserved.</small>
     </div>
   </footer>
+  
 
   <!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
+
+    
+    
 </body>
 </html>
