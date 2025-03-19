@@ -11,240 +11,11 @@
     rel="stylesheet"
   />
 
-  <!-- Bootstrap Icons (for Facebook, Twitter, LinkedIn, Search icons) -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
   />
-
-  <!-- Custom CSS -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: white;
-      color: #333;
-    }
-    footer{
-        background-color: rgba(15, 15, 19, 0.849);
-        color: #666;
-    }
-    .navbar-brand {
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-left: 5%;
-    }
-
-    .navbar-nav .nav-link {
-        position: relative;
-        text-decoration: none;
-        color: #666;
-        margin: 0 1.5rem;
-        transition: color 0.2s;
-    }
-    .navbar-nav .nav-link.active::after,
-        .navbar-nav .nav-link:hover::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 3px;
-        background-color: #af947a;
-        transition: width 0.3s ease-in-out;
-    }
-    .navbar-nav .nav-link::after {
-        width: 0;
-        }
-    .navbar-nav .nav-link.active {
-      color: #000;
-      font-weight: 500;
-    }
-    .navbar-nav .nav-link:hover {
-      color: #000;
-    }
-    .navbar-toggler {
-      border: none;
-    }
-    .navbar-light .navbar-toggler-icon {
-      background-image: none;
-    }
-    .social-icons{
-        margin-right: 5%;
-    }
-    .social-icons a {
-      color: #666;
-      margin-left: 1rem;
-      transition: color 0.2s;
-    }
-    .social-icons a:hover {
-      color: #000;
-    }
-    .article-section {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
-    .article-section p{
-        color: #999
-    }
-    .divider {
-      height: 1px;
-      background-color: #ddd;
-      margin: 1rem 0;
-    }
-    .article-date {
-      font-size: 0.9rem;
-      color: #999;
-    }
-    .article-title {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin: 0.5rem 0;
-      margin-right: 30%;
-    }
-    .article-intro {
-      font-size: 1rem;
-      color: #999;
-    }
-    .article-meta {
-      font-size: 0.9rem;
-      color: #999;
-    }
-    .full-width-img {
-      width: 100%;
-      height: 500px;
-      overflow: hidden;
-      margin: 80px 0;
-    }
-    .full-width-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .colored-dot{
-        color: #af947a;
-    }
-    
-    .table.project-info-table th,
-    .table.project-info-table td {
-    border: none !important;
-    }
-    .table.project-info-table td{
-        color:#999;
-    }
-
-    .tag {
-        display: inline-block;
-        font-weight: bold;
-        text-transform: uppercase;
-        background-color: white;
-        color: #999;
-        border: 1px solid #999;
-        padding: 0.3rem 0.6rem;
-        margin-right: 0.5rem;
-        margin-bottom: 0.5rem;
-        border-radius: 4px;
-        font-size: 0.9rem;
-        margin-top: 3%;
-    }
-    .navbar-light .navbar-toggler-icon {
-        /* this is how I can change the menu's lines color black */
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-
-    footer a {
-    color: inherit !important;
-    }
-
-    .tag p{
-        color:#999;
-    }
-
-    .slider {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .slider-container {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-    }
-
-    .slider-wrapper {
-      display: flex;
-      justify-content: center;
-      transition: transform 0.5s ease;
-      gap: 2rem;
-    }
-
-    .slide {
-      flex: 0 0 calc(33.33% - 1.33rem);
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 16 / 13;
-      transition: transform 0.5s ease;
-    }
-
-    .slide img {
-      width: 150%;
-      height: auto;
-      object-fit: cover;
-      position: relative;
-      left: -25%;
-    }
-
-    .slider-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.8);
-      border: none;
-      font-size: 2rem;
-      cursor: pointer;
-      z-index: 2;
-      padding: 0 10px;
-      transition: opacity 0.3s ease;
-      z-index: 50;
-      opacity: 0;
-    }
-    .slider:hover .slider-arrow {
-      opacity: 0.7;
-    }
-
-    .left-arrow {
-      left: 10px;
-    }
-    .right-arrow {
-      right: 10px;
-    }
-    .slider-dots {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1rem;
-    }
-
-    .slider-dots .dot {
-      width: 12px;
-      height: 12px;
-      border: 2px solid #000;
-      border-radius: 50%;
-      background-color: transparent;
-      margin: 0 6px;
-      cursor: pointer;
-    }
-
-    .slider-dots .dot.active {
-      background-color: #000;
-      border-color: #000;
-    }
-
-
-  </style>
+  <link rel="stylesheet" href="vence.css"></link>
 </head>
 <body>
 
@@ -303,7 +74,9 @@
     <p class="article-intro">
       Many years ago, I worked for my parents who ran a video production company.
     </p>
-  
+    
+    <hr class="my-4">
+
     <div class="article-meta">
       Petar Tovarovation &nbsp; | &nbsp; Design Trend &nbsp; | &nbsp; 2 min
     </div>
@@ -311,7 +84,7 @@
   
   <div class="container-fluid px-0 my-5">
     <div class="full-width-img">
-      <img src="brown_hanger.jpg" alt="Feature Image">
+      <img src="./assets/brown_hanger.jpg" alt="Feature Image">
     </div>
   </div>
 
@@ -324,7 +97,12 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
       dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
     </p>
-    <h2 class="article-title">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
+      dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+    <h2 class="article-subtitle">
         Many of life's failures are people who did not realise how close they were to success when they gave up
       </h2>
   </section>
@@ -335,19 +113,19 @@
   
       <div class="slider-wrapper">
         <div class="slide">
-          <img src="working_clothes.jpg" alt="Image 1">
+          <img src="./assets/working_clothes.jpg" alt="Image 1">
         </div>
         <div class="slide">
-          <img src="brown_clothes.jpg" alt="Image 2">
+          <img src="./assets/brown_clothes.jpg" alt="Image 2">
         </div>
         <div class="slide">
-          <img src="fashion_show.jpg" alt="Image 3">
+          <img src="./assets/fashion_show.jpg" alt="Image 3">
         </div>
         <div class="slide">
-          <img src="black_coats.jpg" alt="Image 4">
+          <img src="./assets/black_coats.jpg" alt="Image 4">
         </div>
         <div class="slide">
-          <img src="red_hoodie.jpg" alt="Image 4">
+          <img src="./assets/red_hoodie.jpg" alt="Image 4">
         </div>
       </div>
   
@@ -366,6 +144,9 @@
         dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
         dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate
+        dolor. Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </p>
   </section>
 
@@ -394,24 +175,43 @@
         </table>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex flex-wrap mt-2">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <div class="d-flex flex-wrap">
           <span class="tag">Creative</span>
           <span class="tag">Inspiration</span>
           <span class="tag">Travel</span>
           <span class="tag">Photography</span>
         </div>
       </div>
+      
+      <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
+        <a href="#" class="share-link">
+          <i class="bi bi-upload"></i> Share
+        </a>
+      </div>  
+  </section>
+
+  <section class="pagination-section">
+    <div class="container">
+      <div class="pagination-content">
+        <a href="#" class="pagination-item left">
+          <span class="pagination-arrow">&#8592;</span>
+          <span class="pagination-text">Minimal Web Trend</span>
+        </a>
+        <a href="#" class="pagination-item right">
+          <span class="pagination-text">Vence Next Blog Trend</span>
+          <span class="pagination-arrow">&#8594;</span>
+        </a>
+      </div>
     </div>
   </section>
   
   <footer class="py-5 border-top">
     <div class="container">
-      <!-- Top Row: Studio Title, Menu Links, Social Icons -->
       <div class="row align-items-center">
         <div class="col-12 col-md-4 text-start">
-          <h5 class="mb-0">VENCE Studio<span class="colored-dot">.</span></h5>
+          <h5 class="mb-0 white">VENCE Studio<span class="colored-dot">.</span></h5>
         </div>
         <div class="col-12 col-md-4 text-center">
           <a href="#" class="me-3 text-decoration-none">About Studio</a>
@@ -424,14 +224,13 @@
             <a href="#" class="text-decoration-none">Ln</a>
         </div>
       </div>
-      <!-- Divider -->
       <hr class="my-4">
       <div class="row">
         <div class="col text-start">
           <small class="mb-1">1088, North Street, Alexandria, AU</small>
         </div>
         <div class="col text-end">
-            <small>© 2023, All Rights Reserved.</small>
+            <small>© 2022, All Rights Reserved.</small>
           </div>
         
       </div>
@@ -443,166 +242,6 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // DOM elements
-      const sliderWrapper = document.querySelector('.slider-wrapper');
-      const slides = Array.from(document.querySelectorAll('.slide'));
-      const leftArrow = document.querySelector('.left-arrow');
-      const rightArrow = document.querySelector('.right-arrow');
-      const sliderDotsContainer = document.querySelector('.slider-dots');
-    
-      const slidesPerView = slides.length;
-      let currentIndex = 0;
-      let updatedSlides;
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      let totalSlides;
-      let dots = [];
-    
-      function buildSlider() {
-        sliderWrapper.innerHTML = '';
-        
-        // Map original slides, data-index for reference
-        const originals = slides.map((slide, i) => {
-          const cloned = slide.cloneNode(true);
-          
-          return cloned;
-        });
-
-        // Left clone: cloning last slide (peeking from the left)
-        const leftClone = slides.slice(-1).map(slide => {
-            const cloned = slide.cloneNode(true);
-            return cloned;
-          });
-
-        // Right clone (peeking from the right)
-        const rightClone = slides.slice(0, slidesPerView - 1).map((slide, i) => {
-          const cloned = slide.cloneNode(true);
-          return cloned;
-        });
-        
-        // Appending all cloned + original slides to the wrapper
-        leftClone.forEach(slide => sliderWrapper.appendChild(slide));
-        originals.forEach(slide => sliderWrapper.appendChild(slide));
-        rightClone.forEach(slide => sliderWrapper.appendChild(slide));
-    
-        updatedSlides = Array.from(sliderWrapper.querySelectorAll('.slide'));
-        totalSlides = updatedSlides.length;
-      }
-      
-      // For shifting the slider
-      function updateSlider(instant = false) {
-        if (!updatedSlides || updatedSlides.length === 0) return;
-        
-        const slideWidth = updatedSlides[0].getBoundingClientRect().width;
-        const gap = parseFloat(getComputedStyle(sliderWrapper).gap) || 0;
-        // this will move the slider
-        const offset = (slideWidth + gap +1) * (currentIndex-1);
-
-        sliderWrapper.style.transition = instant ? 'none' : 'transform 0.5s ease-in-out';
-        sliderWrapper.style.transform = `translateX(${-offset}px)`;
-        
-        updateActiveDot();
-      }
-
-      // Tracking dots under slider
-      function buildDots() {
-        sliderDotsContainer.innerHTML = '';
-        dots = [];
-
-        // As many dots as many images
-        slides.forEach((_, index) => {
-          const dot = document.createElement('div');
-          dot.classList.add('dot');
-          dot.addEventListener('click', () => {
-            currentIndex = index
-            updateSlider();
-          });
-          sliderDotsContainer.appendChild(dot);
-          dots.push(dot);
-        });
-      }
-
-      function updateActiveDot() {
-        if (!dots.length){
-          return;
-        } 
-        const realIndex = (currentIndex + slides.length) % slides.length;
-
-        // Only the actual index dot is active
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[realIndex].classList.add('active');
-      }
-
-      // If we reach end of slides, we reset so we have infinite slider
-      function handleLoop() {
-        if (currentIndex >= slides.length) {
-          currentIndex = 0;
-          updateSlider(true);
-        } else if (currentIndex < 0) {
-          currentIndex = slides.length-1;
-          updateSlider(true);
-        }
-      }
-      // Arrow slides right/left
-      rightArrow.addEventListener('click', function () {
-        goNext();
-      });
-      leftArrow.addEventListener('click', function () {
-        goPrev();
-      });
-
-      function goNext() {
-        currentIndex++;
-        updateSlider();
-      }
-
-      // Move to previous slide
-      function goPrev() {
-        currentIndex--;
-        updateSlider();
-      }
-    
-      sliderWrapper.addEventListener('transitionend', handleLoop);
-    
-      // Touch swipe for phone view
-      let touchStartX = 0;
-      let touchEndX = 0;
-      const minSwipeDistance = 40;
-
-      // When the user first touches the slider
-      sliderWrapper.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].clientX;
-      }, false);
-
-      // When the user lifts their finger
-      sliderWrapper.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].clientX;
-        handleSwipe();
-      }, false);
-
-      function handleSwipe() {
-        // Calculate swipe direction
-        const dx = touchEndX - touchStartX;
-        if (Math.abs(dx) > minSwipeDistance) {
-          if (dx < 0) {
-            goNext();
-          } else {
-            goPrev();
-          }
-        }
-      }
-      
-      // Initial build
-      buildSlider();
-      buildDots();
-      updateSlider(true);
-    });
-    </script>
-
-    
-    
-    
-    
+  <script src="vence.js"></script>
 </body>
 </html>

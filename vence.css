@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+.white {
+    color: white;
+}
+
+footer {
+    background-color: rgba(15, 15, 19, 0.849);
+    color: #666;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-left: 5%;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #666;
+    margin: 0 1.5rem;
+    transition: color 0.2s;
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #af947a;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link::after {
+    width: 0;
+}
+
+.navbar-nav .nav-link.active {
+    color: #000;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: none;
+}
+
+.social-icons {
+    margin-right: 5%;
+}
+
+.social-icons a {
+    color: #666;
+    margin-left: 1rem;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
+
+.article-section {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+  
+
+.article-section p {
+    color: #999
+}
+
+.divider {
+    height: 1px;
+    background-color: #999;
+    margin: 1rem 0;
+}
+
+.article-date {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.article-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    margin-right: 30%;
+}
+
+.article-subtitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    margin-right: 30%;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.article-intro {
+    font-size: 1rem;
+    color: #999;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.full-width-img {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: 80px 0;
+}
+
+.full-width-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.colored-dot {
+    color: #af947a;
+}
+
+.table.project-info-table th,
+.table.project-info-table td {
+    border: none !important;
+}
+
+.table.project-info-table td {
+    color: #999;
+}
+
+.tag {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: white;
+    color: #999;
+    border: 1px solid #999;
+    padding: 0.2rem 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.share-link {
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.share-link i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.share-link:hover {
+    color: #af947a;
+}
+
+.navbar-light .navbar-toggler-icon {
+    /* this is how I can change the menu's lines color black */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+footer a {
+    color: inherit !important;
+}
+
+.tag p {
+    color: #999;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-wrapper {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+}
+
+.slide {
+    flex: 0 0 calc(33.33% - 1.33rem);
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 13;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    width: 150%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    left: -25%;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 10px;
+    transition: opacity 0.3s ease;
+    z-index: 50;
+    opacity: 0;
+}
+
+.slider:hover .slider-arrow {
+    opacity: 0.7;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.slider-dots .dot {
+    width: 9px;
+    height: 9px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.slider-dots .dot.active {
+    background-color: black;
+    border-color: black;
+}
+
+.pagination-section {
+    width: 100%;
+    background: #f3f3f3;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+.pagination-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.pagination-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.pagination-item:hover {
+    color: #af947a;
+}
+
+.pagination-arrow {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.pagination-item.left .pagination-arrow {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pagination-item.right .pagination-arrow {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
