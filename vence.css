@@ -350,3 +350,15 @@ footer a {
 .project-info-item .value {
     color: #999;
 }
+
+@media (max-width: 576px) {
+    .pagination-content {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .pagination-item {
+        justify-content: center;
+    }
+}
