@@ -294,6 +294,7 @@ footer a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0 auto;
     padding-left: 0rem;
     padding-right: 0rem;
@@ -326,4 +327,26 @@ footer a {
 .pagination-item.right .pagination-arrow {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+
+.project-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info-item .label {
+    font-weight: bold;
+    color: #333;
+}
+
+.project-info-item .value {
+    color: #999;
 }
